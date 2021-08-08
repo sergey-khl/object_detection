@@ -70,6 +70,7 @@ if filename != "":
 
     label_id_offset = 1
     image_np_with_detections = image_np.copy()
+    min_score = 0.5
 
     viz_utils.visualize_boxes_and_labels_on_image_array(
                 image_np_with_detections,
@@ -79,11 +80,16 @@ if filename != "":
                 category_index,
                 use_normalized_coordinates=True,
                 max_boxes_to_draw=10,
-                min_score_thresh=.5,
+                min_score_thresh=min_score,
                 agnostic_mode=False)
 
     frame = cv2.cvtColor(image_np_with_detections, cv2.COLOR_BGR2RGB)
+    boxes = np.squeeze(detections['detection_boxes'])
+    scores = np.squeeze(detections['detection_scores'])
+    bboxes = boxes[scores > min_score]
+    
     row1_1.image(frame, use_column_width=True)
+    row1_1.warning(len(bboxes))
 
 with row1_1:
   st.title("Get Started")

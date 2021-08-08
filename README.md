@@ -5,9 +5,11 @@
 3. pip install tensorflow --upgrade
 4. pip install Cython pandas tf-slim lvis
 5. (In the root directory) git clone https://github.com/tensorflow/models
-6. copy models\research\object_detection\packages\tf2\setup.py models\research\setup.py
-7. cd models/research
-8. python setup.py install
+6. cd models/research
+6. copy object_detection\packages\tf2\setup.py setup.py
+7. Add the protoc bin folder to path: setx path "%path%;c:\directoryPath"
+8. protoc object_detection\protos\*.proto --python_out=.
+9. python setup.py install
 
 ## Running the website locally (make sure you are in the root directory) :chicken:
 1. ngrok authtoken 1ubZJpRfO6t6ivwtEosnP0IHwMm_5q9MoQmQh9UBkqknqFVRo
