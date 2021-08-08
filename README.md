@@ -1,7 +1,6 @@
 # object detection of medical tools with the resnet CNN pretrained model
 
-![website](./website.png)
-Format: ![Alt Text](url)
+![website](website.png)
 
 ## prerequisites
 1. python
