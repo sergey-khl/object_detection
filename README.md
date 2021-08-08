@@ -13,7 +13,7 @@
 
 ### Running the website locally (make sure you are in the root directory) :chicken:
 1. ngrok authtoken 1ubZJpRfO6t6ivwtEosnP0IHwMm_5q9MoQmQh9UBkqknqFVRo
-2. start /min streamlit run master_app.py &
+2. start streamlit run master_app.py &
 
 ## Mac Instructions
 ### init (only needs to be done once) :frog:
@@ -24,4 +24,4 @@
 
 ### Running the website locally (make sure you are in the root directory) :chicken:
 1. ngrok authtoken 1ubZJpRfO6t6ivwtEosnP0IHwMm_5q9MoQmQh9UBkqknqFVRo
-2. start /min streamlit run master_app.py &
+2. open streamlit run master_app.py &
