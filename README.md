@@ -22,4 +22,4 @@
 3. pip install Cython pandas tf-slim lvis
 
 ### Running the website locally (make sure you are in the root directory) :llama:
-1. open streamlit run master_app.py &
+1. streamlit run master_app.py &
