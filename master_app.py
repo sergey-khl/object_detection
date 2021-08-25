@@ -18,10 +18,27 @@ def main():
   choice = st.sidebar.selectbox('Menu',menu)
   if choice == 'Home':
     st.subheader("Streamlit From Colab")
+
+    
 if __name__ == '__main__':
 	main()
 
+# Primary accent for interactive elements
+primaryColor = '#587CE3'
 
+# Background color for the main content area
+backgroundColor = '#CFD4E4'
+
+# Background color for sidebar and most interactive widgets
+secondaryBackgroundColor = '#2E4CA0'
+
+# Color used for almost all text
+textColor = '#080808'
+
+# Font family for all text in the app, except code blocks
+# Accepted values (serif | sans serif | monospace) 
+# Default: "sans serif"
+font = "sans serif"
 
 # LAYING OUT THE TOP SECTION OF THE APP
 row1_1, row1_2 = st.columns((2,3))
@@ -126,8 +143,10 @@ with row1_2:
     if "my_saved_result" in app_state:
       saved_result = app_state["my_saved_result"][0]
 
-    stop_timer = time.time()
-    total = stop_timer - float(saved_result)
+      stop_timer = time.time()
+      total = stop_timer - float(saved_result)
+    else:
+      st.info('The program has not been started.')
 
   # st.info(start_timer)
 
