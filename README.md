@@ -12,11 +12,10 @@
 2. pip install tensorflow --upgrade
 3. pip install Cython pandas tf-slim lvis
 4. git clone https://github.com/tensorflow/models.git
-5. copy models\research\object_detection\packages\tf2\setup.py models\research\setup.py
-6. set PATH=%PATH%;C:\path\to\protoc\bin	<-- You have to change this.
-7. cd models/research
-8. protoc object_detection/protos/*.proto --python_out=.
-9. python setup.py install
+5. set PATH=%PATH%;C:\path\to\protoc\bin	<-- You have to change this.
+6. cd models/research
+7. protoc object_detection/protos/*.proto --python_out=.
+8. python setup.py install
 
 ### Running the website locally (make sure you are in the object_detection folder) :chicken:
 1. streamlit run master_app.py
